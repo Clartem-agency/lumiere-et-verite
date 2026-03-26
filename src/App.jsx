@@ -2907,6 +2907,167 @@ La moisson viendra. Je Te fais confiance. Amen.`,
   },
 ];
 
+const RESOURCES = [
+  {
+    category: "books",
+    icon: "📚",
+    title: "Livres",
+    desc: "Les lectures essentielles pour chaque étape de votre parcours",
+    items: [
+      {
+        level: "Débutant",
+        entries: [
+          { title: "L'Évangile de Marc", author: "Bible", note: "Le point d'entrée idéal. Le plus court, le plus dynamique des quatre Évangiles. Se lit en 2 heures. Commencez par là avant tout le reste." },
+          { title: "Pardon et guérison", author: "C.S. Lewis", note: "L'auteur du Monde de Narnia était un athée convaincu devenu chrétien. Ce livre explique les bases de la foi avec une clarté et une honnêteté intellectuelle remarquables. Parfait pour les sceptiques." },
+          { title: "Jésus de Nazareth", author: "Benoît XVI", note: "Un portrait de Jésus écrit par un pape théologien, mais dans un style accessible. Il fait le pont entre l'histoire, la foi et la raison." },
+          { title: "Surprised by Joy (Surpris par la joie)", author: "C.S. Lewis", note: "L'autobiographie spirituelle de Lewis — comment un intellectuel athée d'Oxford est devenu le défenseur le plus célèbre du christianisme au XXe siècle. Un parcours qui parle à beaucoup." },
+        ],
+      },
+      {
+        level: "Intermédiaire",
+        entries: [
+          { title: "Les Confessions", author: "Saint Augustin", note: "Écrit il y a 1 600 ans, mais d'une modernité stupéfiante. Augustin raconte ses addictions, ses errances, sa quête de sens, et sa conversion. On dirait le journal d'un homme de notre époque." },
+          { title: "L'Imitation de Jésus-Christ", author: "Thomas a Kempis", note: "Le livre chrétien le plus lu après la Bible, pendant 600 ans. Court, dense, pratique. Un chapitre par jour suffit." },
+          { title: "Orthodoxie", author: "G.K. Chesterton", note: "Un journaliste anglais du début du XXe siècle explique pourquoi le christianisme est la plus grande aventure intellectuelle qui soit. Drôle, brillant, iconoclaste." },
+          { title: "L'Homme éternel", author: "G.K. Chesterton", note: "Une réponse à ceux qui pensent que le christianisme est une religion comme les autres. Chesterton montre en quoi l'histoire de Jésus est radicalement unique dans l'histoire humaine." },
+        ],
+      },
+      {
+        level: "Avancé",
+        entries: [
+          { title: "Introduction au christianisme", author: "Joseph Ratzinger", note: "Un ouvrage dense mais lumineux qui reprend le Credo ligne par ligne et l'explique pour le monde moderne. Pour ceux qui veulent une foi intellectuellement solide." },
+          { title: "Le Problème de la douleur", author: "C.S. Lewis", note: "La réponse la plus honnête jamais écrite à la question « Si Dieu est bon, pourquoi la souffrance ? ». Lewis ne triche pas avec les objections." },
+          { title: "Pensées", author: "Blaise Pascal", note: "Le génie mathématique français pose la question : est-il raisonnable de croire ? Son fameux « pari de Pascal » est une réflexion magistrale sur la foi et le risque." },
+          { title: "La Porte étroite / Les Nourritures terrestres", author: "André Gide", note: "Deux romans qui explorent la tension entre foi et désir, entre ascèse et jouissance. Pas un livre « chrétien » au sens strict, mais un miroir fascinant pour quiconque se pose ces questions." },
+        ],
+      },
+    ],
+  },
+  {
+    category: "films",
+    icon: "🎬",
+    title: "Films & Séries",
+    desc: "Du cinéma qui touche l'âme — bien au-delà des films « religieux »",
+    items: [
+      {
+        level: "Incontournables",
+        entries: [
+          { title: "La Passion du Christ (2004)", author: "Mel Gibson", note: "Le film qui a probablement inspiré ce blog. D'une violence extrême mais fidèle à la réalité historique. À voir au moins une fois dans sa vie — mais accrochez-vous." },
+          { title: "The Chosen (série, 2017–)", author: "Dallas Jenkins", note: "LA série sur la vie de Jésus. Accessible, émouvante, humaine. Elle donne une épaisseur aux personnages qu'on ne trouve nulle part ailleurs. Parfait pour les débutants. Disponible gratuitement sur l'appli The Chosen." },
+          { title: "Des hommes et des dieux (2010)", author: "Xavier Beauvois", note: "Film français bouleversant sur les moines de Tibhirine en Algérie, qui choisissent de rester malgré la menace terroriste. Un film sur le courage, la foi face à la mort, et la fraternité. Grand Prix à Cannes." },
+          { title: "Ben-Hur (1959)", author: "William Wyler", note: "Le classique absolu. L'histoire d'un prince juif trahi par son ami romain, qui croise le chemin de Jésus. La course de chars est légendaire, mais c'est le parcours spirituel du héros qui marque." },
+        ],
+      },
+      {
+        level: "Pour approfondir",
+        entries: [
+          { title: "Silence (2016)", author: "Martin Scorsese", note: "Deux prêtres jésuites au Japon du XVIIe siècle, face à la persécution. Le film pose LA question la plus difficile : où est Dieu quand ses fidèles souffrent en silence ? Scorsese a mis 28 ans à le réaliser." },
+          { title: "L'Évangile selon Saint Matthieu (1964)", author: "Pier Paolo Pasolini", note: "Un film sur Jésus réalisé par un athée marxiste — et considéré comme le plus fidèle au texte biblique jamais produit. Dépouillé, brut, magnifique." },
+          { title: "La Passion de Jeanne d'Arc (1928)", author: "Carl Theodor Dreyer", note: "Un film muet sur le procès de Jeanne d'Arc. Les gros plans sur le visage de l'actrice sont d'une intensité qui transcende le cinéma. Un chef-d'œuvre absolu sur la foi face au pouvoir." },
+          { title: "Au-delà des collines (2012)", author: "Cristian Mungiu", note: "Film roumain qui explore les limites entre foi sincère et fanatisme destructeur. Éprouvant mais nécessaire pour comprendre comment la religion peut dérailler." },
+        ],
+      },
+      {
+        level: "Films grand public avec une dimension spirituelle",
+        entries: [
+          { title: "Les Évadés (1994)", author: "Frank Darabont", note: "Pas un film religieux en surface, mais une parabole puissante sur l'espérance, la rédemption et la liberté intérieure même en prison. « L'espoir est une bonne chose, peut-être la meilleure, et une bonne chose ne meurt jamais. »" },
+          { title: "Le Seigneur des Anneaux (trilogie)", author: "Peter Jackson", note: "Tolkien était un catholique fervent. Son œuvre est imprégnée de thèmes chrétiens : le sacrifice, la tentation du pouvoir, la grâce, la victoire du petit sur le grand, la résurrection. Un chef-d'œuvre." },
+          { title: "Hacksaw Ridge (2016)", author: "Mel Gibson", note: "L'histoire vraie d'un soldat qui refuse de porter une arme pendant la Seconde Guerre mondiale — par conviction religieuse — et qui sauve 75 hommes à mains nues. La foi en action." },
+          { title: "Into the Wild (2007)", author: "Sean Penn", note: "L'histoire d'un jeune homme qui quitte tout pour chercher la vérité dans la nature sauvage. Pas chrétien, mais profondément spirituel — et un miroir pour tous ceux qui cherchent le sens de leur vie." },
+        ],
+      },
+    ],
+  },
+  {
+    category: "music",
+    icon: "🎵",
+    title: "Musique",
+    desc: "De quoi nourrir l'âme — du silence contemplatif à l'énergie du worship",
+    items: [
+      {
+        level: "Worship contemporain (pour l'énergie et l'émotion)",
+        entries: [
+          { title: "Oceans (Where Feet May Fail)", author: "Hillsong UNITED", note: "Probablement le chant de worship le plus célèbre du monde. Basé sur l'histoire de Pierre marchant sur l'eau. Les paroles sont une prière à elles seules." },
+          { title: "You Say", author: "Lauren Daigle", note: "Un antidote musical au syndrome de l'imposteur. « Tu dis que je suis aimé quand je ne sens rien. Tu dis que je suis fort quand je me crois faible. » Voix extraordinaire." },
+          { title: "What A Beautiful Name", author: "Hillsong Worship", note: "Un hymne majestueux sur le nom de Jésus. La montée progressive donne des frissons. Parfait pour un moment de prière intense." },
+          { title: "Reckless Love", author: "Cory Asbury", note: "Un chant sur l'amour « déraisonnable » de Dieu — celui qui laisse les 99 brebis pour courir après la seule qui s'est perdue. Idéal quand on se sent indigne d'être aimé." },
+        ],
+      },
+      {
+        level: "Musique chrétienne francophone",
+        entries: [
+          { title: "Louange & Adoration", author: "Glorious", note: "Le groupe de worship francophone le plus connu. Énergie et profondeur. Leurs concerts sont de véritables expériences spirituelles." },
+          { title: "L'Amour est là", author: "Hopen", note: "Du worship français moderne, accessible et fédérateur. Parfait pour découvrir la louange en français sans l'aspect « vieux cantique »." },
+          { title: "Que ma prière s'élève", author: "Communauté de l'Emmanuel", note: "Plus traditionnel, mais d'une beauté contemplative. Pour les moments de calme et de méditation." },
+        ],
+      },
+      {
+        level: "Musique contemplative (pour la méditation et le silence)",
+        entries: [
+          { title: "Chants grégoriens", author: "Moines de Solesmes", note: "La musique chrétienne dans sa forme la plus pure — des voix masculines sans instruments, dans des abbayes millénaires. Effet apaisant immédiat. Idéal pour travailler, méditer ou s'endormir." },
+          { title: "Taizé — chants de la communauté", author: "Communauté de Taizé", note: "Des chants courts et répétitifs en plusieurs langues, conçus pour la prière contemplative. La répétition n'est pas de la paresse — c'est une porte vers le silence intérieur." },
+          { title: "Miserere", author: "Gregorio Allegri", note: "Composé au XVIIe siècle, ce chant polyphonique est considéré comme l'une des plus belles œuvres musicales jamais créées. Mozart l'a transcrit de mémoire après une seule écoute — et le Vatican a tenté de garder la partition secrète pendant des siècles." },
+        ],
+      },
+    ],
+  },
+  {
+    category: "podcasts",
+    icon: "🎙️",
+    title: "Podcasts & Chaînes YouTube",
+    desc: "Apprendre en marchant, en conduisant ou en cuisinant",
+    items: [
+      {
+        level: "En français",
+        entries: [
+          { title: "Prixm (podcast)", author: "Le Monde de la Bible", note: "Un podcast court (10-15 min) qui décrypte un passage biblique par épisode. Accessible, bien produit, parfait pour les trajets quotidiens." },
+          { title: "Théobule", author: "Dominicains de Lille", note: "Des vidéos très courtes et simples qui expliquent les Évangiles. Conçu pour les enfants mais excellent pour les adultes qui redécouvrent la foi." },
+          { title: "La Foi prise au mot", author: "KTO TV (YouTube)", note: "L'émission de référence en français pour les questions théologiques. Des invités de qualité, un ton accessible. Des centaines d'épisodes disponibles sur YouTube." },
+          { title: "Padreblog", author: "Padreblog (YouTube)", note: "Deux prêtres français qui parlent de foi avec humour et modernité. Ils abordent les sujets tabous sans complexe. Rafraîchissant." },
+        ],
+      },
+      {
+        level: "En anglais (pour ceux qui sont à l'aise)",
+        entries: [
+          { title: "The Bible Project (YouTube)", author: "Tim Mackie & Jon Collins", note: "DES animations magnifiques qui expliquent chaque livre de la Bible en 5-10 minutes. Le meilleur contenu visuel sur la Bible qui existe. Certaines vidéos sont sous-titrées en français." },
+          { title: "Ascension Presents (YouTube)", author: "Father Mike Schmitz", note: "Un prêtre américain charismatique qui répond aux questions modernes avec franchise et humour. Son « Bible in a Year » podcast a été le n°1 mondial sur Apple Podcasts." },
+          { title: "Unbelievable? (podcast)", author: "Justin Brierley", note: "Un podcast qui met face à face un croyant et un athée sur les grandes questions (Dieu existe-t-il ? La résurrection est-elle possible ?). Intellectuellement rigoureux et respectueux." },
+        ],
+      },
+    ],
+  },
+  {
+    category: "apps",
+    icon: "📱",
+    title: "Applications",
+    desc: "Votre smartphone au service de votre foi — pas contre elle",
+    items: [
+      {
+        level: "Pour lire la Bible",
+        entries: [
+          { title: "YouVersion / Bible App", author: "Life.Church", note: "L'application Bible la plus téléchargée au monde (500 millions+). Des centaines de traductions, des plans de lecture guidés, des versets du jour. Gratuit. C'est l'outil indispensable." },
+          { title: "Bible.is", author: "Faith Comes By Hearing", note: "La Bible en version audio — pour écouter les Évangiles en marchant, en conduisant ou avant de dormir. Plusieurs voix et dramatisations disponibles." },
+        ],
+      },
+      {
+        level: "Pour prier",
+        entries: [
+          { title: "Hozana", author: "Hozana.org", note: "Application française de communautés de prière en ligne. On rejoint un groupe, on reçoit des méditations quotidiennes, et on prie ensemble à distance. Très communautaire." },
+          { title: "Pray (anciennement Pray.com)", author: "Pray Inc.", note: "Des prières guidées, des méditations chrétiennes et des histoires bibliques au format audio. Idéal pour ceux qui ne savent pas par où commencer quand ils prient." },
+          { title: "Rosario (Chapelet)", author: "Diverses", note: "Pour les catholiques ou les curieux : une application qui guide à travers la prière du chapelet, pas à pas. Apaisant, méditatif, et accessible même sans connaître la prière." },
+        ],
+      },
+      {
+        level: "Pour méditer en chrétien",
+        entries: [
+          { title: "Glorify", author: "Glorify Ltd", note: "L'équivalent chrétien de Headspace. Méditations guidées, musique de worship, journal de gratitude, versets quotidiens. Interface magnifique. Existe en français." },
+          { title: "Abide", author: "Carpenters Code", note: "Des méditations bibliques pour le sommeil, l'anxiété, la paix intérieure. L'antidote chrétien au doomscrolling nocturne — remplacez 15 minutes d'infos négatives par 15 minutes de paix guidée." },
+        ],
+      },
+    ],
+  },
+];
+
 // ======= COMPONENTS =======
 
 function Navbar({ page, setPage, menuOpen, setMenuOpen }) {
@@ -2936,7 +3097,8 @@ function Navbar({ page, setPage, menuOpen, setMenuOpen }) {
             { label: "Accueil", p: { type: "home" } },
             { label: "Articles", p: { type: "articles" } },
             { label: "Prières", p: { type: "prayers" } },
-            { label: "Par où commencer", p: { type: "start" } },
+            { label: "Ressources", p: { type: "resources" } },
+            { label: "Commencer", p: { type: "start" } },
             { label: "À propos", p: { type: "about" } },
           ].map((item) => (
             <button key={item.label}
@@ -2974,7 +3136,8 @@ function Navbar({ page, setPage, menuOpen, setMenuOpen }) {
             { label: "Accueil", p: { type: "home" } },
             { label: "Articles", p: { type: "articles" } },
             { label: "Prières", p: { type: "prayers" } },
-            { label: "Par où commencer", p: { type: "start" } },
+            { label: "Ressources", p: { type: "resources" } },
+            { label: "Commencer", p: { type: "start" } },
             { label: "À propos", p: { type: "about" } },
           ].map((item) => (
             <button key={item.label}
@@ -3521,6 +3684,116 @@ function AboutPage() {
   );
 }
 
+function ResourcesPage() {
+  const [openCat, setOpenCat] = useState("books");
+
+  return (
+    <div style={{ maxWidth: 800, margin: "0 auto", padding: "100px 24px 80px" }}>
+      <div style={{ textAlign: "center", marginBottom: 48 }}>
+        <div style={{ fontSize: 48, marginBottom: 16 }}>📚</div>
+        <h1 style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 400,
+          color: "#E8DDD3", marginBottom: 12,
+        }}>Ressources</h1>
+        <p style={{
+          fontFamily: "'DM Sans', sans-serif", fontSize: 17, color: "#A89B8C",
+          fontWeight: 300, lineHeight: 1.6, maxWidth: 560, margin: "0 auto",
+        }}>
+          Livres, films, musique, podcasts et applications — une sélection commentée pour accompagner votre chemin, quel que soit votre niveau.
+        </p>
+      </div>
+
+      {/* Category tabs */}
+      <div style={{
+        display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center", marginBottom: 40,
+      }}>
+        {RESOURCES.map(res => (
+          <button key={res.category}
+            onClick={() => setOpenCat(res.category)}
+            style={{
+              fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 500,
+              background: openCat === res.category ? "rgba(201, 169, 110, 0.15)" : "rgba(232, 221, 211, 0.04)",
+              color: openCat === res.category ? "#C9A96E" : "#A89B8C",
+              border: `1px solid ${openCat === res.category ? "rgba(201, 169, 110, 0.3)" : "rgba(186, 154, 112, 0.08)"}`,
+              padding: "10px 18px", borderRadius: 20, cursor: "pointer",
+              transition: "all 0.2s",
+            }}>
+            {res.icon} {res.title}
+          </button>
+        ))}
+      </div>
+
+      {/* Active category content */}
+      {RESOURCES.filter(r => r.category === openCat).map(res => (
+        <div key={res.category}>
+          <p style={{
+            fontFamily: "'DM Sans', sans-serif", fontSize: 15, color: "#A89B8C",
+            fontWeight: 300, lineHeight: 1.6, textAlign: "center", marginBottom: 32,
+            fontStyle: "italic",
+          }}>{res.desc}</p>
+
+          {res.items.map((section, sIdx) => (
+            <div key={sIdx} style={{ marginBottom: 32 }}>
+              <h3 style={{
+                fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600,
+                color: "#C9A96E", letterSpacing: "0.12em", textTransform: "uppercase",
+                marginBottom: 16, paddingBottom: 8,
+                borderBottom: "1px solid rgba(201, 169, 110, 0.12)",
+              }}>{section.level}</h3>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                {section.entries.map((entry, eIdx) => (
+                  <div key={eIdx} style={{
+                    padding: "16px 20px", borderRadius: 10,
+                    background: "rgba(232, 221, 211, 0.03)",
+                    border: "1px solid rgba(186, 154, 112, 0.06)",
+                    transition: "all 0.2s",
+                  }}>
+                    <div style={{ display: "flex", alignItems: "baseline", gap: 8, marginBottom: 6, flexWrap: "wrap" }}>
+                      <span style={{
+                        fontFamily: "'Cormorant Garamond', serif", fontSize: 18, fontWeight: 600,
+                        color: "#E8DDD3",
+                      }}>{entry.title}</span>
+                      <span style={{
+                        fontFamily: "'DM Sans', sans-serif", fontSize: 13, color: "#C9A96E",
+                        fontWeight: 400,
+                      }}>— {entry.author}</span>
+                    </div>
+                    <p style={{
+                      fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: "#A89B8C",
+                      fontWeight: 300, lineHeight: 1.6, margin: 0,
+                    }}>{entry.note}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+
+      <div style={{
+        textAlign: "center", marginTop: 40, padding: 24, borderRadius: 12,
+        background: "rgba(201, 169, 110, 0.05)",
+        border: "1px solid rgba(201, 169, 110, 0.12)",
+      }}>
+        <p style={{
+          fontFamily: "'Cormorant Garamond', serif", fontSize: 18,
+          fontStyle: "italic", color: "#C9A96E", lineHeight: 1.6, marginBottom: 8,
+        }}>
+          Une ressource vous a marqué et n'est pas dans cette liste ?
+        </p>
+        <p style={{
+          fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: "#A89B8C",
+          fontWeight: 300,
+        }}>
+          Cette page est vivante — elle s'enrichit régulièrement de nouvelles découvertes.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function StartPage({ setPage }) {
   const paths = [
     {
@@ -3696,7 +3969,8 @@ function Footer({ setPage }) {
           { label: "Accueil", p: { type: "home" } },
           { label: "Articles", p: { type: "articles" } },
           { label: "Prières", p: { type: "prayers" } },
-          { label: "Par où commencer", p: { type: "start" } },
+          { label: "Ressources", p: { type: "resources" } },
+          { label: "Commencer", p: { type: "start" } },
           { label: "À propos", p: { type: "about" } },
         ].map(item => (
           <button key={item.label} onClick={() => setPage(item.p)} style={{
@@ -3769,6 +4043,8 @@ export default function App() {
         })()}
 
         {page.type === "prayers" && <PrayersPage />}
+
+        {page.type === "resources" && <ResourcesPage />}
 
         {page.type === "start" && <StartPage setPage={navigate} />}
 
